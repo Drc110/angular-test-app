@@ -1,0 +1,23 @@
+.wrapper{
+    background-color: rgb(251, 248, 241);
+    padding: 0 20px;
+    @media only screen and (max-width: 1024px) {
+        padding: 0;
+    }
+    .createText{
+        font-size: x-large;
+        cursor: pointer;
+    }
+}
+
+.msgLogIn{
+    display: flex;
+    justify-content: center;
+    h3{
+        background-color: rgb(247, 236, 222);
+        padding: 30px;
+        text-align: center;
+        transform: translateY(30vh);
+        border-radius: 5px;
+    }
+}

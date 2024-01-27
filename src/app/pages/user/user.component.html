@@ -1,0 +1,37 @@
+<div *ngIf="register; then primaryBlock; else elseBlock"></div>
+
+<ng-template #primaryBlock>
+    <div class = "wrapper">
+        <h2>Регистрация</h2>
+        <div class = "duo">
+            <p>Имя</p>
+            <input type="text" placeholder="Любое, на ваш вкус" [(ngModel)]="fullname">
+        </div>
+        <div class = "duo">
+            <p [ngClass] = "{'valid' : emailCheck, 'invalid' : !emailCheck}">Почта</p>
+            <input type="email" placeholder="example@domain.com " [(ngModel)]="email"/>
+        </div>
+        <div class = "duo">
+            <p [ngClass] = "{'valid' : passwordCheck, 'invalid' : !passwordCheck}">Пароль</p>
+            <input type="password" placeholder="От 3-х символов, более 1 цифры" [(ngModel)]="password">
+        </div>
+        <button (click)="registerBtn()">Зарегистрироваться</button>
+        <h4 (click)="toggle()">У меня есть аккаунт</h4>
+    </div>
+</ng-template>
+
+<ng-template #elseBlock>
+    <div class = "wrapper">
+        <h2>Войти</h2>
+        <div class="duo">
+            <p [ngClass] = "{'valid' : emailCheck, 'invalid' : !emailCheck}">Почта</p>
+            <input type="email" placeholder="example@domain.com" [(ngModel)]="email">
+        </div>
+        <div class="duo">
+            <p [ngClass] = "{'valid' : passwordCheck, 'invalid' : !passwordCheck}">Пароль</p>
+            <input type="password" placeholder="От 3-х символов, более 1 цифры" [(ngModel)]="password">
+        </div>
+        <button (click)="loginBtn()">Войти</button>
+        <h4 (click)="toggle()">У меня нет аккаунта</h4>
+    </div>
+</ng-template>

@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="left">
+        <div class="left-top">
+            <p> {{post.date | date : 'd/M/yyyy, h:mm a'}}</p>
+            <p>Запись № {{post.id}}</p>
+        </div>
+        <div class="left-bottom">
+            <div *ngFor="let block of post.content">
+                <div [innerHTML]="block"></div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="right">
+        <div class="right-top">
+            <p [routerLink]="['/editPost/', post.id]">Редактировать</p>
+        </div>
+        <div class="right-bottom">
+            <p (click)="deletePost()">Удалить</p>
+        </div>
+    </div>
+</div>

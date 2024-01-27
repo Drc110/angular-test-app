@@ -1,0 +1,67 @@
+.wrapper{
+    margin: 5% auto;
+    width: 35vw;
+    height: 50vh;
+    background-color: rgb(247, 236, 222);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        align-self: center;
+        margin-bottom: 0;
+    }
+    .duo{
+        width: 100%;
+        input{
+            width: 100%;
+            height: 4vh;
+            font-size: large;
+        }
+        :last-of-type{
+            margin-bottom: 10px;
+        }
+    }
+    button{
+        cursor: pointer;
+        font-size: large;
+        border: 1px solid rgb(187, 165, 133);
+        background-color: rgb(233, 218, 193);
+        border-radius: 5px;
+        width: 50%;
+        height: 5vh;
+    }
+    h4{
+        cursor: pointer;
+        font-weight: 500;
+        align-self: center;
+        color: rgb(170, 68, 68);
+    }
+
+    .valid{
+        color: green;
+    }
+    .invalid{
+        color: red;
+        animation: horizontal-shaking 0.5s;
+    }
+    @keyframes horizontal-shaking {
+        0% { transform: translateX(0) }
+        25% { transform: translateX(5px) }
+        50% { transform: translateX(-5px) }
+        75% { transform: translateX(5px) }
+        100% { transform: translateX(0) }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper{
+        margin: 30px auto;
+        width: 70vw;
+        height: 50vh;
+        button{
+            width: 80%;
+        }
+    }
+}

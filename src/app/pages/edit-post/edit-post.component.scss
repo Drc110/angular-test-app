@@ -1,0 +1,20 @@
+.wrapper{
+    padding: 0 20px; //mixin
+    display: flex;
+    flex-direction: column;
+    .temp{
+        background-color: rgb(247, 236, 222);
+        margin-bottom: 25px;
+    }
+    .confirmBtn{
+        left: 50%;
+        margin:0 auto;
+        font-size: large;
+        border: 1px solid rgb(187, 165, 133);
+        background-color: rgb(233, 218, 193);
+        border-radius: 5px;
+        width: 33%;
+        height: 5vh;
+        min-height: 40px;
+    }
+}

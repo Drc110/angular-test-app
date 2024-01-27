@@ -1,0 +1,16 @@
+<div *ngIf="logged; then primaryBlock; else elseBlock"></div>
+
+<ng-template #primaryBlock>
+    <div class="wrapper">
+        <h3 routerLink="/create" class="createText">Создать запись</h3>
+        <app-post *ngFor="let el of posts" [post]="el">
+
+        </app-post>
+    </div>
+</ng-template>
+
+<ng-template #elseBlock>
+    <div class="msgLogIn">
+        <h3>Список записей будет доступен после авторизации!</h3>
+    </div>
+</ng-template>
